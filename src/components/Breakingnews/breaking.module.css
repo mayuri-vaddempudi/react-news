@@ -1,0 +1,39 @@
+.breaking {
+    color: black;
+    padding: 0px 10px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid black;
+    margin-top: 10px;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.list {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.list li {
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.arrow {
+    color: black;
+    font-weight: bold;
+    margin-left: 6px;
+}

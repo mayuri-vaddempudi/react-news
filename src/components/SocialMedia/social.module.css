@@ -1,0 +1,20 @@
+.socialMedia ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+}
+
+.socialMedia a {
+    background: black;
+    color: white;
+    padding: 8px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.socialMedia a:hover {
+    color: blue;
+}

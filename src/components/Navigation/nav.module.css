@@ -1,0 +1,28 @@
+.navigation {
+    background-color: black;
+    padding: 10px 0;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+    font-size: 18px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+
+}
+
+.menu li:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.active {
+    color: red;
+    border-bottom: 2px solid red;
+}

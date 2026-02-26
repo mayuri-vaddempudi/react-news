@@ -1,0 +1,17 @@
+.number {
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    font-size: 18px;
+    padding: 4px;
+    margin-top: 25px;
+}
+
+.number p {
+    margin: 0px;
+    padding: 0px;
+}
+
+.number i {
+    margin-right: 8px;
+}

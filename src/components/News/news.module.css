@@ -1,0 +1,19 @@
+.news {
+    margin: 15px;
+}
+
+.newsFocus {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+/* 30% width */
+.newsFocus> :first-child {
+    flex: 0 0 30%;
+}
+
+/* Remaining space */
+.newsFocus> :last-child {
+    flex: 1;
+}

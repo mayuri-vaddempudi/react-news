@@ -1,0 +1,74 @@
+.recent {
+    padding: 40px 20px;
+}
+
+/* Main Layout */
+.layout {
+    display: flex;
+    gap: 20px;
+}
+
+/* LEFT SIDE - BIG NEWS */
+.focus {
+    flex: 2;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.focus img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.focusContent {
+    padding: 15px;
+    background: white;
+}
+
+.focusContent h3 {
+    margin: 10px 0;
+    font-size: 22px;
+}
+
+.focusContent p {
+    color: #555;
+}
+
+/* RIGHT SIDE - SMALL NEWS */
+.side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.smallCard {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.smallCard img {
+    width: 135px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.smallCard h4 {
+    margin: 5px 0 0;
+    font-size: 14px;
+}
+
+/* Category badge */
+.category {
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #e10600;
+}
