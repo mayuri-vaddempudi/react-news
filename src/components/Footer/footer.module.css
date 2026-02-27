@@ -1,0 +1,116 @@
+.footer {
+    background-color: #111;
+    color: #fff;
+    padding: 40px 20px 20px 20px;
+    font-family: sans-serif;
+}
+
+.footerContent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.brand h2 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.brand p {
+    font-size: 0.9rem;
+    margin-top: 5px;
+    color: #aaa;
+}
+
+.company,
+.nav,
+.subscribe {
+    min-width: 200px;
+}
+
+h4 {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #fff;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: #0070f3;
+}
+
+.subscribeForm {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.subscribeForm input {
+    flex: 1;
+    padding: 8px 10px;
+    border-radius: 4px 0 0 4px;
+    border: none;
+}
+
+.subscribeForm button {
+    padding: 8px 15px;
+    background-color: #0070f3;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+    transition: background-color 0.2s;
+}
+
+.subscribeForm button:hover {
+    background-color: #005bb5;
+}
+
+.social a {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social img {
+    width: 24px;
+    height: 24px;
+    filter: invert(100%);
+    transition: filter 0.2s;
+}
+
+.social a:hover img {
+    filter: invert(50%) sepia(1) saturate(5) hue-rotate(180deg);
+}
+
+.bottom {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.8rem;
+    color: #777;
+    border-top: 1px solid #333;
+    padding-top: 15px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .footerContent {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

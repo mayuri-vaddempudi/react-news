@@ -1,7 +1,14 @@
 import styles from "./breaking.module.css";
-import { articles } from "../../data/data.js";
 
-const Breakingnews = () => {
+const Breakingnews = ({ articles }) => {
+    // Get current date
+    const today = new Date();
+    const formattedDate = today.toLocaleDateString("en-US", {
+        weekday: "short",
+        month: "short",
+        day: "numeric",
+        year: "numeric",
+    });
     return (
         <div className={styles.breaking}>
             <h3 className={styles.title}>Breaking News:</h3>
@@ -16,6 +23,7 @@ const Breakingnews = () => {
                     </li>
                 ))}
             </ul>
+            <span className={styles.date}>{formattedDate}</span>
         </div>
     );
 };

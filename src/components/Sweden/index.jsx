@@ -1,7 +1,7 @@
 import styles from "./sweden.module.css";
-import { articles } from "../../data/data.js"
 
-const Sweden = () => {
+
+const Sweden = ({ articles }) => {
     const swedenArticles = articles.filter((article) => article.category === "sweden");
     return (
         <div className={styles.sweden}>

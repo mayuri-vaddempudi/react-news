@@ -1,8 +1,7 @@
 import styles from "./recent.module.css";
-import { articles } from "../../data/data";
 
 
-const RecentNews = () => {
+const RecentNews = ({ articles }) => {
 
     // Remove sports
     const filtered = articles.filter(
