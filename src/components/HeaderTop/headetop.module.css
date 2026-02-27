@@ -1,5 +1,33 @@
 .headerTop {
     display: flex;
-    gap: 414px;
-    margin: 10px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+
+/* ========================= */
+/* Tablet Styles */
+@media (max-width: 900px) {
+    .headerTop {
+        padding: 10px 15px;
+        /* slightly smaller padding */
+        gap: 10px;
+        /* optional spacing between elements */
+    }
+}
+
+/* ========================= */
+/* Mobile Styles */
+@media (max-width: 600px) {
+    .headerTop {
+        flex-direction: column;
+        /* stack items vertically */
+        align-items: center;
+        /* center all items */
+        gap: 10px;
+        /* spacing between stacked items */
+        padding: 10px 10px;
+        /* smaller padding for mobile */
+    }
 }

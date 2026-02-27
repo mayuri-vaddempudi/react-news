@@ -5,7 +5,7 @@ const Sports = ({ articles }) => {
     const sportsArticles = articles.filter(article => article.category === "sport");
 
     // Shuffle the sports articles randomly
-    const shuffledSports = [...sportsArticles].sort(() => 0.5 - Math.random());
+    const shuffledSports = [...sportsArticles].sort(() => Math.random() - 0.5);
 
     // Pick 2 random articles
     const randomSports = shuffledSports.slice(0, 2);
@@ -15,7 +15,7 @@ const Sports = ({ articles }) => {
             <h2>Sports News</h2>
             <div className={styles.sportsLayout}>
                 {randomSports.map((article, index) => (
-                    <div key={article.id || index} className={styles.sportsCard}>
+                    <div key={index} className={styles.sportsCard}>
                         <img src={`/images/${article.image}`} alt={article.headline} />
                         <div className={styles.sportsContent}>
                             <span className={styles.category}>{article.category}</span>

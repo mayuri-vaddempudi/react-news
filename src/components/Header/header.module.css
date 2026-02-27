@@ -1,4 +1,38 @@
 .header {
     display: flex;
     justify-content: center;
+    width: 100%;
+}
+
+.headerTitle {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ========================= */
+/* Tablet Styles */
+/* ========================= */
+@media (max-width: 900px) {
+    .headerTitle {
+        padding: 0 15px;
+        /* add side padding on tablet */
+    }
+}
+
+/* ========================= */
+/* Mobile Styles */
+/* ========================= */
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        /* stack if needed */
+        align-items: center;
+    }
+
+    .headerTitle {
+        padding: 0 10px;
+        /* smaller side padding */
+        width: 100%;
+    }
 }

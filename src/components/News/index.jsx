@@ -5,29 +5,43 @@ import Sports from "../Sports";
 import RecentNews from "../Recentnews";
 import Infocus from "../Infocus";
 import { articles } from "../../data/data";
-import FocusNext from "../Focusnext";
+
 
 const News = () => {
-    const filtered = articles.filter(article => article.category !== "sport")
+    // Remove sport for top section
+    const nonSport = articles.filter(article => article.category !== "sport")
 
-    const shuffled = [...filtered].sort(() => 0.5 - Math.random());
-
+    // Shuffle non-sport articles
+    const shuffled = [...nonSport].sort(() => Math.random() - 0.5);
     const focusArticle = shuffled[0];
-    const nextArticles = shuffled.slice(1, 4);
 
+    // Get unique categories
+    const categories = [...new Set(nonSport.map(a => a.category))];
+
+    const recentArticles = categories.map(category => {
+        const categoryArticles = nonSport.filter(
+            article => article.category === category
+        );
+
+        const randomIndex = Math.floor(
+            Math.random() * categoryArticles.length
+        );
+
+        return categoryArticles[randomIndex];
+    });
     return (
         <div className={styles.news}>
             <Breakingnews articles={articles} />
-            <div className={styles.newsFocus}>
-                <RecentNews articles={articles} />
-                <div>
-                    <Infocus focusArticle={focusArticle} nextArticles={nextArticles} />
+            <div className={styles.topSection}>
+                <RecentNews articles={recentArticles} />
 
-                </div>
+                <Infocus article={focusArticle} />
+
+                <Sports articles={articles} />
 
             </div>
 
-            <Sports articles={articles} />
+
             <International articles={articles} />
         </div>
     )

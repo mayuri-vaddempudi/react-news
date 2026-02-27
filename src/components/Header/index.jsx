@@ -9,8 +9,6 @@ const Header = () => {
                 <HeaderTop />
                 <Navigation />
             </div>
-
-
         </div>
     )
 }

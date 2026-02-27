@@ -1,19 +1,17 @@
 .news {
-    margin: 15px;
+    margin: auto;
+    padding: 20px;
 }
 
-.newsFocus {
-    display: flex;
+.topSection {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
     gap: 20px;
-    align-items: flex-start;
+    margin-top: 20px;
 }
 
-/* 30% width */
-.newsFocus> :first-child {
-    flex: 0 0 30%;
-}
-
-/* Remaining space */
-.newsFocus> :last-child {
-    flex: 1;
+@media (max-width: 900px) {
+    .topSection {
+        grid-template-columns: 1fr;
+    }
 }

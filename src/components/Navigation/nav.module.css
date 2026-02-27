@@ -1,3 +1,25 @@
+.socialMedia ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+}
+
+.socialMedia a {
+    background: black;
+    color: white;
+    padding: 8px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.socialMedia a:hover {
+    color: blue;
+}
+
 .navigation {
     background-color: black;
     padding: 10px 0;
@@ -9,20 +31,60 @@
     gap: 30px;
     list-style: none;
     font-size: 18px;
+    padding: 0;
+    margin: 0;
 }
 
 .menu a {
     text-decoration: none;
     color: white;
-
+    transition: 0.3s;
 }
 
-.menu li:hover {
+.menu a:hover {
     color: red;
-    cursor: pointer;
 }
 
 .active {
     color: red;
     border-bottom: 2px solid red;
+}
+
+/* ========================= */
+/* Tablet Styles */
+/* ========================= */
+@media (max-width: 900px) {
+    .menu {
+        gap: 20px;
+        font-size: 16px;
+    }
+
+    .navigation {
+        padding: 8px 0;
+    }
+}
+
+/* ========================= */
+/* Mobile Styles */
+/* ========================= */
+@media (max-width: 600px) {
+
+    /* Stack menu vertically */
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        font-size: 16px;
+    }
+
+    .navigation {
+        padding: 15px 0;
+    }
+
+    /* Social Media icons wrap */
+    .socialMedia ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
 }

@@ -1,60 +1,116 @@
 .sports {
-    margin: 40px 0;
+    padding: 15px;
+    background: #fff;
 }
 
 .sports h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #ccc;
-    padding-bottom: 5px;
+    margin-bottom: 15px;
+    font-size: 22px;
 }
 
 .sportsLayout {
     display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    /* keeps it responsive */
+    flex-direction: column;
+    gap: 15px;
 }
 
 .sportsCard {
-    flex: 1;
-    /* divide space evenly */
-    min-width: 250px;
-    /* prevent cards from being too small */
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    background: #fff;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
-}
-
-.sportsCard:hover {
-    transform: translateY(-5px);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-bottom: 1px solid #eee;
 }
 
 .sportsCard img {
-    width: 100%;
-    height: 450px;
+    width: 250px;
+    height: 165px;
     object-fit: cover;
 }
 
-.sportsContent {
-    padding: 10px 15px;
-}
-
 .sportsContent h3 {
-    margin: 10px 0 5px;
-    font-size: 1.2rem;
+    font-size: 15px;
+    margin-bottom: 5px;
 }
 
 .sportsContent p {
-    font-size: 0.9rem;
+    font-size: 13px;
     color: #555;
 }
 
 .category {
-    font-size: 0.8rem;
-    color: #0070f3;
-    font-weight: bold;
+    font-size: 12px;
+    color: #e91e63;
+}
+
+/* ========================= */
+/* Tablet Styles (≤900px) */
+/* ========================= */
+@media (max-width: 900px) {
+    .sports {
+        padding: 12px;
+    }
+
+    .sports h2 {
+        font-size: 20px;
+    }
+
+    .sportsCard img {
+        width: 300px;
+        height: 200px;
+        margin: 10px 30px;
+    }
+
+    .sportsContent h3 {
+        font-size: 14px;
+    }
+
+    .sportsContent p {
+        font-size: 12px;
+    }
+
+    .sportsLayout {
+        flex-direction: row;
+    }
+
+    .category {
+        font-size: 11px;
+    }
+}
+
+/* ========================= */
+/* Mobile Styles (≤600px) */
+/* ========================= */
+@media (max-width: 600px) {
+    .sports {
+        padding: 10px;
+    }
+
+    .sports h2 {
+        font-size: 18px;
+    }
+
+    .sportsLayout {
+        gap: 12px;
+    }
+
+    .sportsCard {
+        gap: 8px;
+    }
+
+    .sportsCard img {
+        width: 100%;
+        height: auto;
+    }
+
+    .sportsContent h3 {
+        font-size: 14px;
+    }
+
+    .sportsContent p {
+        font-size: 12px;
+    }
+
+    .category {
+        font-size: 11px;
+    }
 }

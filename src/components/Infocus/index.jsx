@@ -1,34 +1,33 @@
-
-import FocusNext from "../Focusnext";
 import styles from "./infocus.module.css";
 
+const Infocus = ({ article }) => {
+    if (!article) return null;
 
-const Infocus = ({ focusArticle, nextArticles }) => {
-    if (!focusArticle) return null;
-    const { image, category, headline, deck, story } = focusArticle;
+    const { image, category, headline, deck, story } = article;
+
     return (
-        <div className={styles.recent}>
+        <div className={styles.main}>
+            <img
+                src={`/images/${image}`}
+                alt={headline}
+                className={styles.image}
+            />
 
-            <div className={styles.layout}>
+            <div className={styles.content}>
+                <span className={styles.category}>
+                    {category}
+                </span>
 
-                {/* LEFT - BIG RANDOM NEWS */}
-                <div className={styles.focus}>
-                    <img
-                        src={`/images/${image}`}
-                        alt={headline}
-                    />
-                    <div className={styles.focusContent}>
-                        <span className={styles.category}>
-                            {category}
-                        </span>
-                        <h3>{headline}</h3>
-                        <p>{deck}</p>
-                        <p>{story}</p>
-                    </div>
-                </div>
+                <h2 className={styles.headline}>
+                    {headline}
+                </h2>
 
-                {/* RIGHT - 3 RANDOM NEWS */}
-                <FocusNext nextArticles={nextArticles} />
+                <p className={styles.deck}>
+                    {deck}
+                </p>
+                <p className={styles.story}>
+                    {story}
+                </p>
             </div>
         </div>
     );
